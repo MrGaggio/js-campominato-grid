@@ -16,7 +16,25 @@ Le validazioni e i controlli possiamo farli in un secondo momento. */
 
 
 
-// creare una griglia di dimensioni comprese tra 1 e 100
+/* creare una griglia di dimensioni comprese tra:
+
+- 1 e 100
+- 1 e 81
+- 1 e 49
+
+*/
+
+
+
+const row = 10
+const col = 10
+const numberSquare = row * col
+const maxNumber = numberSquare;
+const minNumber = 1;
+const containerGrid = document.getElementById('griglia')
+// console.log(griglia);
+
+
 
 //creare 100 quadrati
 
@@ -25,8 +43,13 @@ for (let i = 1; i <= 100; i++) {
     const square = document.createElement("div")
      // do ai div la classe square
     square.classList.add("square")
-   
     console.log(square);
+    square.style.width = `calc(100% / ${col})`;
+    square.style.height = `calc(100% / ${row})`;
+    square.append(i)
+    containerGrid.append(square)
+    
+   
 
 
     

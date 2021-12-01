@@ -40,7 +40,18 @@ footer{
     margin-left: 20px;
 }
 
-.grid_wrap{
+#griglia{
     width: 50%;
 }
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / var(--square-size)); /*possiamo cambiare numero square con variabile*/
+    height: calc(100% / var(--square-size));
+    color: white;
+    cursor: pointer;
+    border: 2px solid black;
+  }
 
