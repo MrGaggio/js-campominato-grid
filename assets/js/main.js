@@ -13,3 +13,21 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli in un secondo momento. */
 
 
+
+
+
+// creare una griglia di dimensioni comprese tra 1 e 100
+
+//creare 100 quadrati
+
+for (let i = 1; i <= 100; i++) {
+    //creo 100 div
+    const square = document.createElement("div")
+     // do ai div la classe square
+    square.classList.add("square")
+   
+    console.log(square);
+
+
+    
+}
