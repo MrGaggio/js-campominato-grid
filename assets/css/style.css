@@ -30,7 +30,7 @@ h1{
 .container-fluid{
     background-color: aquamarine;
     height: calc(100vh - 150px);
-
+    padding-top: 150px;
 }
 
 
@@ -41,7 +41,11 @@ footer{
 }
 
 #griglia{
-    width: 50%;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .square {
@@ -50,8 +54,7 @@ footer{
     justify-content: center;
     width: calc(100% / var(--square-size)); /*possiamo cambiare numero square con variabile*/
     height: calc(100% / var(--square-size));
-    color: white;
     cursor: pointer;
-    border: 2px solid black;
+    border: 1px solid black;
   }
 
