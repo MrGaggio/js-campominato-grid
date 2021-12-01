@@ -13,19 +13,6 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli in un secondo momento. */
 
 
-
-
-
-/* creare una griglia di dimensioni comprese tra:
-
-- 1 e 100
-- 1 e 81
-- 1 e 49
-
-*/
-
-
-
 let row = 10
 let col = 10
 let numberSquare = row * col
@@ -36,52 +23,52 @@ const containerGrid = document.getElementById('griglia')
 
 
 
+// Selezione elementi Dom
+let selectLevel = document.getElementById("difficolta").value
+let easyLevel = document.getElementById("easy").value
+let mediumLevel = document.getElementById("medium").value
+let hardLevel = document.getElementById("hard").value
+
 //creare 100 quadrati
 
-for (let i = 1; i <= 100; i++) {
-    //creo 100 div
-    const square = document.createElement("div")
-     // do ai div la classe square
-    square.classList.add("square")
-    square.style.width = `calc(100% / ${col})`;
-    square.style.height = `calc(100% / ${row})`;
-    square.append(i)
-    containerGrid.append(square)
+// for (let i = 1; i <= numberSquare; i++) {
+//     //creo 100 div
+//     const square = document.createElement("div")
+//      // do ai div la classe square
+//     square.classList.add("square")
+//     square.style.width = `calc(100% / ${col})`;
+//     square.style.height = `calc(100% / ${row})`;
+//     square.append(i)
+//     containerGrid.append(square)
+// }
 
 
 
-    
+document.getElementById("button").addEventListener('click', function selectLevel() {
+          if (selectLevel == mediumLevel ) {
+            numberSquare = 81
+            } else {
     
 }
+    for (let i = 1; i <= numberSquare; i++) {
+        //creo 100 div
+        const square = document.createElement("div")
+         // do ai div la classe square
+        square.classList.add("square")
+        square.style.width = `calc(100% / ${col})`;
+        square.style.height = `calc(100% / ${row})`;
+        square.append(i)
+        containerGrid.append(square)
 
 
-// creare funzione per selezione numero quadrati alla pressione del pulsante play
-
-const easy = document.getElementById("easy")
-const medium = document.getElementById("medium")
-const hard = document.getElementById("hard")
-
-
-
-if (easy) {
-    minNumber = 1
-    maxNumber = 100
-
-} else if (medium){
-    minNumber = 1
-    maxNumber = 81
-} else
-    minNumber = 1
-    maxNumber = 49
-
-document.getElementById("button").addEventListener('click', function selectGrid(minNumber, maxNumber) {
-
+        
+    }
+    
 });
 
 
 
 
-// creare la griglia da 100 nel momento in cui seleziono "easy" e premo il bottone "play"
 
 
 
