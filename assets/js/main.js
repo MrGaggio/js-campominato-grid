@@ -43,14 +43,38 @@ for (let i = 1; i <= 100; i++) {
     const square = document.createElement("div")
      // do ai div la classe square
     square.classList.add("square")
-    console.log(square);
     square.style.width = `calc(100% / ${col})`;
     square.style.height = `calc(100% / ${row})`;
     square.append(i)
     containerGrid.append(square)
     
-   
-
-
-    
 }
+
+
+// creare funzione per selezione numero quadrati alla pressione del pulsante play
+
+const easy = document.getElementById("easy")
+const medium = document.getElementById("medium")
+const hard = document.getElementById("hard")
+
+
+document.getElementById("button").addEventListener('click', function selectGrid(minNumber, maxNumber) {
+    if (easy) {
+        minNumber = 1
+        maxNumber = 100
+    } else if (medium){
+        minNumber = 1
+        maxNumber = 81
+    } else
+        minNumber = 1
+        maxNumber = 49
+});
+
+
+
+
+// creare la griglia da 100 nel momento in cui seleziono "easy" e premo il bottone "play"
+
+
+
+
