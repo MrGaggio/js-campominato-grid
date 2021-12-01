@@ -7,4 +7,36 @@
 
 .header{
     height: 100px;
+    margin: auto;
 }
+
+h1{
+    align-self: center;
+}
+
+.select_wrap{
+    align-self: center;
+    justify-content: end;
+
+}
+
+
+.button{
+    align-self: center;
+    justify-content: end;
+}
+
+
+.container-fluid{
+    background-color: aquamarine;
+    height: calc(100vh - 150px);
+
+}
+
+
+footer{
+    height: 50px;
+    line-height: 50px;
+    margin-left: 20px;
+}
+
