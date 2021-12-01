@@ -26,11 +26,11 @@ Le validazioni e i controlli possiamo farli in un secondo momento. */
 
 
 
-const row = 10
-const col = 10
-const numberSquare = row * col
-const maxNumber = numberSquare;
-const minNumber = 1;
+let row = 10
+let col = 10
+let numberSquare = row * col
+let maxNumber = numberSquare;
+let minNumber = 1;
 const containerGrid = document.getElementById('griglia')
 // console.log(griglia);
 
@@ -47,6 +47,10 @@ for (let i = 1; i <= 100; i++) {
     square.style.height = `calc(100% / ${row})`;
     square.append(i)
     containerGrid.append(square)
+
+
+
+    
     
 }
 
@@ -58,16 +62,20 @@ const medium = document.getElementById("medium")
 const hard = document.getElementById("hard")
 
 
+
+if (easy) {
+    minNumber = 1
+    maxNumber = 100
+
+} else if (medium){
+    minNumber = 1
+    maxNumber = 81
+} else
+    minNumber = 1
+    maxNumber = 49
+
 document.getElementById("button").addEventListener('click', function selectGrid(minNumber, maxNumber) {
-    if (easy) {
-        minNumber = 1
-        maxNumber = 100
-    } else if (medium){
-        minNumber = 1
-        maxNumber = 81
-    } else
-        minNumber = 1
-        maxNumber = 49
+
 });
 
 
