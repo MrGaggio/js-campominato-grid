@@ -29,20 +29,26 @@ let easyLevel = document.getElementById("easy").value
 let mediumLevel = document.getElementById("medium").value
 let hardLevel = document.getElementById("hard").value
 
+
 //creare 100 quadrati
 
-// for (let i = 1; i <= numberSquare; i++) {
-//     //creo 100 div
-//     const square = document.createElement("div")
-//      // do ai div la classe square
-//     square.classList.add("square")
-//     square.style.width = `calc(100% / ${col})`;
-//     square.style.height = `calc(100% / ${row})`;
-//     square.append(i)
-//     containerGrid.append(square)
-// }
+for (let i = 1; i <= numberSquare; i++) {
+    //creo 100 div
+    const square = document.createElement("div")
+     // do ai div la classe square
+    square.classList.add("square")
+    square.style.width = `calc(100% / ${col})`;
+    square.style.height = `calc(100% / ${row})`;
+    square.append(i)
+    containerGrid.append(square)
+}
 
 
+//quando l'utente clicca su una casella diventa blu al click
+
+document.getElementsByClassName("div.square").addEventListener('click',function (square) {
+    square.classList.add("blu")
+});
 
 document.getElementById("button").addEventListener('click', function selectLevel() {
           if (selectLevel == mediumLevel ) {
