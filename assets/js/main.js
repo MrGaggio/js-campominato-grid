@@ -66,6 +66,7 @@ let buttonPlay = document.getElementById('button')
 //     containerGrid.append(square)
 
 buttonPlay.addEventListener('click', function () {
+    containerGrid.innerHTML = ""
     const level = selectLevel.value
         if (level == "easy") {
         numberSquare = 100;
