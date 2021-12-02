@@ -24,6 +24,7 @@ h1{
 .button{
     align-self: center;
     justify-content: end;
+    width: 100px;
 }
 
 

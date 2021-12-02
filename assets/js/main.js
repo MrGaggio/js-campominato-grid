@@ -25,15 +25,37 @@ const containerGrid = document.getElementById('griglia')
 
 // Selezione elementi Dom
 let selectLevel = document.getElementById("difficolta").value
+let hardLevel = document.getElementById("hard").value
+let mediumLevel = document.getElementById("medium").value
+let easyLevel = document.getElementById("easy").value
 
 
 
 //creare 100 quadrati
 
+//funzione per cambiare il livello
+ function level(selectLevel, numberSquare, row) {
+    if (selectLevel == "easy") {
+        numberSquare = 100;
+        row = 10;
+        console.log(selectLevel);
+    } else if(selectLevel == "medium") {
+        numberSquare = 81;
+        row = 9;
+    } else if(selectLevel == "hard") {
+        numberSquare = 49;
+        row = 7;
+    }
+    return numberSquare
+};
 
 
+
+document.getElementById("button").addEventListener('click', function () {
+  
 for (let i = 1; i <= numberSquare; i++) {
     //creo 100 div
+
     const square = document.createElement("div")
     //cambio colore allo square al click
     square.addEventListener('click', function () { 
@@ -48,31 +70,6 @@ for (let i = 1; i <= numberSquare; i++) {
 }
 
 
-
-
-document.getElementById("button").addEventListener('click', function () {
-          
-
-
-    for (let i = 1; i <= numberSquare; i++) {
-        //creo 100 div
-        const square = document.createElement("div")
-         
-        divEl.addEventListener('click', function () {
-            // modifica il colore di questo (this) elemento con className o style. 
-            this.style.backgroundColor = 'blu'
-          })
-        // do ai div la classe square
-        square.classList.add("square")
-        square.style.width = `calc(100% / ${col})`;
-        square.style.height = `calc(100% / ${row})`;
-        square.append(i)
-        containerGrid.append(square)
-
-
-
-        
-    }
     
 });
 
