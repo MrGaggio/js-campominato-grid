@@ -36,10 +36,8 @@ for (let i = 1; i <= numberSquare; i++) {
     //creo 100 div
     const square = document.createElement("div")
     //cambio colore allo square al click
-    square.addEventListener('click', function () {
-        
-        this.style.backgroundColor = 'blu'
-        console.log(this);
+    square.addEventListener('click', function () { 
+        this.classList.add("blu")
       })
      // do ai div la classe square
     square.classList.add("square")
